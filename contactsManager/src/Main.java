@@ -17,7 +17,7 @@ public class Main {
     public static void loadData() {
         //this function loads the contacts arraylist with contacts
         //later i'll retrieve from file
-        contacts.add(new ArrayList<Contact>("Beth","Lee",2101111111));
+        contacts.add(new Contact("Beth", "Lee", "2111111111"));
     }
 
     //List of contacts go here , ArrayList , static
@@ -52,7 +52,7 @@ public class Main {
 
  //      }while ();
 
- //  }
+   }
 
 
 }

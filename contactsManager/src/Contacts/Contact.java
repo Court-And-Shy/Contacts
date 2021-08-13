@@ -10,10 +10,10 @@ public class Contact {
 
     private String lastName;
 
-    private double number;
+    private String number;
 
     //Constructor
-    public Contact(String firstName, String lastName, double number) {
+    public Contact(String firstName, String lastName, String number) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.number = number;
@@ -35,11 +35,11 @@ public class Contact {
         this.lastName = lastName;
     }
 
-    public double getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(double number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
