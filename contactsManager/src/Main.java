@@ -1,6 +1,7 @@
 import Contacts.Contact;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
@@ -48,9 +49,23 @@ public class Main {
         // 3. Do something with that input
         // 4. First choice we need to work with is Quit **
 
- //      do{
+        //main menu
+    mainMenu();
 
- //      }while ();
+    Scanner scan = new Scanner(System.in);
+    int userInput = scan.nextInt();
+    boolean programRunning = true;
+
+
+
+      do {
+
+          if (userInput == 5) {
+              programRunning = false;
+              System.out.println("Goodbye");
+          }
+
+      }while (programRunning);
 
    }
 
