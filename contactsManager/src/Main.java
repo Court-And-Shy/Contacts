@@ -17,7 +17,7 @@ public class Main {
     public static void loadData() {
         //this function loads the contacts arraylist with contacts
         //later i'll retrieve from file
-        contacts.add(new Contact("Beth","Lee",2101111111));
+        contacts.add(new ArrayList<Contact>("Beth","Lee",2101111111));
     }
 
     //List of contacts go here , ArrayList , static
@@ -48,11 +48,11 @@ public class Main {
         // 3. Do something with that input
         // 4. First choice we need to work with is Quit **
 
-        do{
+ //      do{
 
-        }while ();
+ //      }while ();
 
-    }
+ //  }
 
 
 }
