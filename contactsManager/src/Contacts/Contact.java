@@ -57,8 +57,7 @@ public class Contact {
 
     String userInput = scan.next();
 
-    // Main Menu Display
-    // # 2.
+
 
 
     public static void contactApp() {
