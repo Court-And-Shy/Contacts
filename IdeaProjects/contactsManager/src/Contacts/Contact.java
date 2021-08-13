@@ -6,11 +6,44 @@ public class Contact {
 
     // Contacts
 
-    public static String firstName;
+    private String firstName;
 
-    public static String lastName;
+    private String lastName;
 
-    public static double number;
+    private double number;
+
+    //Constructor
+    public Contact(String firstName, String lastName, double number) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.number = number;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public double getNumber() {
+        return number;
+    }
+
+    public void setNumber(double number) {
+        this.number = number;
+    }
+
+    // ArrayList of Contacts
 
     // Would you like to :
 
@@ -24,7 +57,14 @@ public class Contact {
 
     String userInput = scan.next();
 
+    // Main Menu Display
+    // # 2.
+
+
     public static void contactApp() {
+
+
+
 
     }
 
