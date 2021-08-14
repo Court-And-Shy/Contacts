@@ -29,9 +29,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        System.out.println("Welcome to Contacts Manager, Press Any Key To Continue: ");
-        loadData();
-
+        System.out.println("Welcome to Contacts Manager");
 
         runProgram();
 
@@ -54,6 +52,7 @@ public class Main {
         int userInput = scan.nextInt();
         boolean programRunning = true;
 
+        //loadData();
 
         // Exits correctly
         do {
@@ -62,7 +61,10 @@ public class Main {
                 programRunning = false;
                 System.out.println("Goodbye");
             } else if(userInput == 1) {
-                System.out.println("View Contacts");
+                // Display all contacts
+                System.out.println("Name | Phone number");
+                System.out.println("---------------");
+                System.out.println("First Name" + "Last Name" + " | " + "Phone Number");
             } else if(userInput == 2) {
                 System.out.println("Add a new contact");
             } else if(userInput == 3) {
