@@ -1,11 +1,18 @@
 import Contacts.Contact;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
 
+    //MAIN MENU
     public static void mainMenu() {
         System.out.println("Enter an option (1, 2, 3, 4 or 5): ");
         System.out.println("1. View contacts.\n" +
@@ -15,17 +22,46 @@ public class Main {
                 "5. Exit.\n");
     }
 
-    public static void loadData() {
+    //LOAD DATA
+    public static void loadData() throws IOException {
         //this function loads the contacts arraylist with contacts
         //later i'll retrieve from file
-        contacts.add(new Contact("Beth", "Lee", "2111111111"));
-    }
+        String directory = "src/Contacts";
+        String filename = "contacts.txt";
+
+
+        ArrayList<String> individual = new ArrayList<String>();
+        individual.add("Jack@Blank|1231231234");
+
+        Path dataDirectory = Paths.get(directory);
+        Path dataFile = Paths.get(directory, filename);
+
+        try {
+            if (Files.notExists(dataDirectory)) {
+                Files.createDirectories(dataDirectory);
+            }
+            if (!Files.exists(dataFile)) {
+                Files.createFile(dataFile);
+            }
+        } catch(Exception e) {
+            System.out.println("Sorry, File Not Found");
+        }
+
+
+        List<String> contentsReadFromFile = Files.readAllLines(dataFile);
+
+        for(String line : contentsReadFromFile) {
+            System.out.println(line);
+        }
+
+    } // END LOAD DATA
 
     //List of contacts go here , ArrayList , static
 
     public static ArrayList<Contact> contacts = new ArrayList<>();
 
 
+    // MAIN
     public static void main(String[] args) {
 
 
@@ -36,6 +72,7 @@ public class Main {
 
     }
 
+    // RUN PROGRAM
     private static void runProgram() {
         //Main Loop
         // Build out main application loop
