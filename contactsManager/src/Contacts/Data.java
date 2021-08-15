@@ -47,6 +47,8 @@ public class Data {
             String filename = "contacts.txt";
 
             ArrayList<String> contactInfo = new ArrayList<String>();
+
+
             contactInfo.add(name + " | " + number + " | ");
 
 
@@ -61,6 +63,7 @@ public class Data {
             if (!Files.exists(dataFile)) {
                 Files.createFile(dataFile);
             }
+
 
             Files.write(dataFile, contactInfo, StandardOpenOption.APPEND);
 

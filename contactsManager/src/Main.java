@@ -89,13 +89,7 @@ public class Main {
 
     // RUN PROGRAM
     private static void runProgram() {
-        //Main Loop
-        // Build out main application loop
-        // Accept users choice
-        // 1. Print Menu
-        // 2. Get input (Bring in input class from other class)
-        // 3. Do something with that input
-        // 4. First choice we need to work with is Quit **
+
 
         boolean programRunning = true;
 
@@ -105,11 +99,6 @@ public class Main {
         do {
             mainMenu();
 
-            Scanner userInput = new Scanner(System.in);
-            int choice = userInput.nextInt();
-            if(choice == 5) {
-                programRunning = false;
-            }
 
         } while (programRunning);
 
@@ -125,6 +114,33 @@ public class Main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Main Loop
+// Build out main application loop
+// Accept users choice
+// 1. Print Menu
+// 2. Get input (Bring in input class from other class)
+// 3. Do something with that input
+// 4. First choice we need to work with is Quit **
+
 // TODO: Currently our Add A New Contact Feature Works
 // TODO: We need to get the Exit option to work properly
 // TODO: We need to be able to display the contacts
@@ -139,37 +155,13 @@ public class Main {
 //      ---------------
 //      Jack Blank | 1231231234
 //      Jane Doe | 2342342345
-//      Sam Space | 3453453456
+//Sam Space | 3453453456
 
 //        Name       | Phone number |
 //        ---------------------------
 //        Jack Blank | 210-567-8923 |
 //        Jane Doe   | 789-8902     |
 //        Sam Space  | 210-581-8123 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //    //this function loads the contacts arraylist with contacts
