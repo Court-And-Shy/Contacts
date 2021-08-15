@@ -28,6 +28,9 @@ public class Main {
         int choice = scan.nextInt();
         scan.nextLine();
 
+        boolean userWantsToExit = true;
+
+
         switch (choice) {
             case 1:
                 System.out.println("\nDisplaying all contacts...(Contacts)");
@@ -39,12 +42,10 @@ public class Main {
             case 2:
                 System.out.println("\nAdding new contact... (Firstname Lastname | Number)");
 
-
                 System.out.println("What is the First and last name?");
                 String name = scan.nextLine();
                 System.out.println("What is their phone number?");
                 long number = scan.nextLong();
-
 
                 Data.addContact(name, number);
                 break;
@@ -57,9 +58,6 @@ public class Main {
                 break;
             case 5:
                 System.out.println("\nGood bye!");
-                if(choice == 5) {
-
-                }
                 break;
             default:
                 break;
@@ -106,6 +104,13 @@ public class Main {
 
         do {
             mainMenu();
+
+            Scanner userInput = new Scanner(System.in);
+            int choice = userInput.nextInt();
+            if(choice == 5) {
+                programRunning = false;
+            }
+
         } while (programRunning);
 
     } // END OF RUN PROGRAM METHOD

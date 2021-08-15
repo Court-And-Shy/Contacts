@@ -17,11 +17,22 @@ public class Data {
     //VIEW CONTACTS
     public static void viewContacts() {
 
-        System.out.println("I'm inside of Data class but I'm run in the main through the menu in option 1");
+
+        try {
+            System.out.println("I'm inside of Data class but I'm run in the main through the menu in option 1");
+
+
+
+
+            // If any thing breaks , this is the error message that will run because it caught the error
+        } catch (Exception e) {
+            System.out.println("I'm sorry, I can't can't you right now.");
+        }
+
 
     }
 
-    public static void createDirectoryAndFile(){
+    public static void createDirectoryAndFile() {
 
     }
 
@@ -29,20 +40,18 @@ public class Data {
     public static void addContact(String name, long number) {
 
         try {
-            System.out.println("Adding contact... " + name + " | " + number);
+            System.out.println("Adding contact... " + name + " | " + number + " | ");
 
 
             String directory = "data";
             String filename = "contacts.txt";
 
             ArrayList<String> contactInfo = new ArrayList<String>();
-            contactInfo.add(name + " | " + number);
+            contactInfo.add(name + " | " + number + " | ");
 
 
             Path dataDirectory = Paths.get(directory);
             Path dataFile = Paths.get(directory, filename);
-
-
 
 
             // Code That Will Run
