@@ -20,14 +20,14 @@ public class Contact {
     }
 
     public String getFirstName() {
-        return firstName;
+        return lastName;
     }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
+    public  String getLastName() {
         return lastName;
     }
 

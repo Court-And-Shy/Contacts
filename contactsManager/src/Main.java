@@ -1,4 +1,5 @@
 import Contacts.Contact;
+import Contacts.Data;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -14,45 +15,61 @@ public class Main {
 
     //MAIN MENU
     public static void mainMenu() {
+        Scanner scan = new Scanner(System.in);
+
+
         System.out.println("Enter an option (1, 2, 3, 4 or 5): ");
         System.out.println("1. View contacts.\n" +
                 "2. Add a new contact.\n" +
                 "3. Search a contact by name.\n" +
                 "4. Delete an existing contact.\n" +
                 "5. Exit.\n");
-    }
+
+        int choice = scan.nextInt();
+        scan.nextLine();
+
+        switch (choice) {
+            case 1:
+                System.out.println("\nDisplaying all contacts...(Contacts)");
+                System.out.println("Name | Phone number");
+                System.out.println("---------------");
+
+                Data.viewContacts();
+                break;
+            case 2:
+                System.out.println("\nAdding new contact... (Firstname Lastname | Number)");
+
+
+                System.out.println("What is the First and last name?");
+                String name = scan.nextLine();
+                System.out.println("What is their phone number?");
+                long number = scan.nextLong();
+
+
+                Data.addContact(name, number);
+                break;
+            case 3:
+                System.out.println("\nEnter the Name of contact you would like to search. (Firstname LastName)");
+                Data.searchContact(scan.nextLine());
+                break;
+            case 4:
+                System.out.println("\nEnter the phone number of the contact you would like deleted. (Number)");
+                break;
+            case 5:
+                System.out.println("\nGood bye!");
+                if(choice == 5) {
+
+                }
+                break;
+            default:
+                break;
+        }
+
+    } // END MAIN MENU
+
 
     //LOAD DATA
     public static void loadData() throws IOException {
-        //this function loads the contacts arraylist with contacts
-        //later i'll retrieve from file
-        String directory = "src/Contacts";
-        String filename = "contacts.txt";
-
-
-        ArrayList<String> individual = new ArrayList<String>();
-        individual.add("Jack@Blank|1231231234");
-
-        Path dataDirectory = Paths.get(directory);
-        Path dataFile = Paths.get(directory, filename);
-
-        try {
-            if (Files.notExists(dataDirectory)) {
-                Files.createDirectories(dataDirectory);
-            }
-            if (!Files.exists(dataFile)) {
-                Files.createFile(dataFile);
-            }
-        } catch(Exception e) {
-            System.out.println("Sorry, File Not Found");
-        }
-
-
-        List<String> contentsReadFromFile = Files.readAllLines(dataFile);
-
-        for(String line : contentsReadFromFile) {
-            System.out.println(line);
-        }
 
     } // END LOAD DATA
 
@@ -70,7 +87,7 @@ public class Main {
         runProgram();
 
 
-    }
+    } // END OF MAIN METHOD
 
     // RUN PROGRAM
     private static void runProgram() {
@@ -82,38 +99,81 @@ public class Main {
         // 3. Do something with that input
         // 4. First choice we need to work with is Quit **
 
-        //main menu
-        mainMenu();
-
-        Scanner scan = new Scanner(System.in);
-        int userInput = scan.nextInt();
         boolean programRunning = true;
 
         //loadData();
 
-        // Exits correctly
+
         do {
-
-            if (userInput == 5) {
-                programRunning = false;
-                System.out.println("Goodbye");
-            } else if(userInput == 1) {
-                // Display all contacts
-                System.out.println("Name | Phone number");
-                System.out.println("---------------");
-                System.out.println("First Name" + "Last Name" + " | " + "Phone Number");
-            } else if(userInput == 2) {
-                System.out.println("Add a new contact");
-            } else if(userInput == 3) {
-                System.out.println("Search a contact by name");
-            } else if(userInput == 4) {
-                System.out.println("Delete an existing contact");
-            }
-
-
+            mainMenu();
         } while (programRunning);
 
-    }
+    } // END OF RUN PROGRAM METHOD
 
 
-}
+}// END OF MAIN CLASS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    //this function loads the contacts arraylist with contacts
+//    //later i'll retrieve from file
+//    String directory = "src/Contacts";
+//    String filename = "contacts.txt";
+//
+//
+//    ArrayList<String> individual = new ArrayList<String>();
+//        individual.add("Jack@Blank|1231231234");
+//
+//                Path dataDirectory = Paths.get(directory);
+//                Path dataFile = Paths.get(directory, filename);
+//
+//                try {
+//                if (Files.notExists(dataDirectory)) {
+//                Files.createDirectories(dataDirectory);
+//                }
+//                if (!Files.exists(dataFile)) {
+//                Files.createFile(dataFile);
+//                }
+//                } catch (Exception e) {
+//                System.out.println("Sorry, File Not Found");
+//                }
+//
+//
+//
+//                List<String> contentsReadFromFile = Files.readAllLines(dataFile);
+//
+//        for (String line : contentsReadFromFile) {
+//        System.out.println(line);
+//        }
