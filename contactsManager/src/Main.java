@@ -125,7 +125,27 @@ public class Main {
 
 
 
+// TODO: Currently our Add A New Contact Feature Works
+// TODO: We need to get the Exit option to work properly
+// TODO: We need to be able to display the contacts
+// TODO: We need to be able to search to contacts by name
+// TODO: We need to be able to delete an existing contact
 
+// TODO: BONUS SECTION
+
+//TODO: FORMATTING
+
+//      Name | Phone number
+//      ---------------
+//      Jack Blank | 1231231234
+//      Jane Doe | 2342342345
+//      Sam Space | 3453453456
+
+//        Name       | Phone number |
+//        ---------------------------
+//        Jack Blank | 210-567-8923 |
+//        Jane Doe   | 789-8902     |
+//        Sam Space  | 210-581-8123 |
 
 
 
