@@ -7,6 +7,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 // Get user first name, last name and phone number , append them
 // Split first name and last name with @  ex:
@@ -78,7 +79,35 @@ public class Data {
 
 
     //SEARCH CONTACTS
-    public static void searchContact(String s) {
+    public static void searchContact(String name) {
+
+        try{
+            Scanner scan = new Scanner(new File("contacts.txt"));
+
+
+            String searchedContactNumber[];
+
+            boolean foundContact = false;
+
+            while(scan.hasNextLine()) {
+                searchedContactNumber = scan.nextLine().split(" ");
+                if(searchedContactNumber[0].equals(name)){
+                    System.out.println("The number associated with " + name + " is " + searchedContactNumber[1]);
+                    foundContact = true;
+                }
+            }
+
+
+            if(!foundContact) {
+                System.out.println("Could not find " + name);
+            }
+
+            System.out.println("");
+
+        }catch (IOException e) {
+            System.out.println("Sorry, please try again later");
+        }
+
 
     }
 
