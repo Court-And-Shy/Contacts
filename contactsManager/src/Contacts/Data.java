@@ -21,6 +21,10 @@ public class Data {
 
     }
 
+    public static void createDirectoryAndFile(){
+
+    }
+
     //ADD CONTACTS
     public static void addContact(String name, long number) {
 
@@ -28,7 +32,7 @@ public class Data {
             System.out.println("Adding contact... " + name + " | " + number);
 
 
-            String directory = "src/Contacts";
+            String directory = "data";
             String filename = "contacts.txt";
 
             ArrayList<String> contactInfo = new ArrayList<String>();
