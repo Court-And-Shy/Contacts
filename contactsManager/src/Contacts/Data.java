@@ -82,7 +82,7 @@ public class Data {
     public static void searchContact(String name) {
 
         try{
-            Scanner scan = new Scanner(new File("contacts.txt"));
+            Scanner scan = new Scanner(System.in);
 
 
             String searchedContactNumber[];
@@ -91,7 +91,7 @@ public class Data {
 
             while(scan.hasNextLine()) {
                 searchedContactNumber = scan.nextLine().split(" ");
-                if(searchedContactNumber[0].equals(name)){
+                if(searchedContactNumber[0].contains(name)){
                     System.out.println("The number associated with " + name + " is " + searchedContactNumber[1]);
                     foundContact = true;
                 }
@@ -104,7 +104,7 @@ public class Data {
 
             System.out.println("");
 
-        }catch (IOException e) {
+        }catch (Exception e) {
             System.out.println("Sorry, please try again later");
         }
 
