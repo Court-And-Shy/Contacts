@@ -15,6 +15,7 @@ import java.util.Scanner;
 public class Data {
 
 
+
     //VIEW CONTACTS
     public static void viewContacts() {
 
@@ -113,5 +114,11 @@ public class Data {
 
     //DELETE CONTACTS
 
+    //EXIT PROGRAM
+
+    public static void exitProgram() {
+
+        System.exit(0);
+    }
 
 }

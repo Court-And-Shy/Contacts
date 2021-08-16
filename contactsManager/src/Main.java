@@ -58,6 +58,7 @@ public class Main {
                 break;
             case 5:
                 System.out.println("\nGood bye!");
+                Data.exitProgram();
                 break;
             default:
                 break;
