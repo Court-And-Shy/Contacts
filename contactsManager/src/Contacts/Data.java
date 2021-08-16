@@ -123,10 +123,43 @@ public class Data {
     }
 
     //TODO: DELETE CONTACTS
-    public static void deleteContact(long number) {
+    public static void deleteContact() {
 
+
+        try {
+
+            String directory = "data";
+            String filename = "contacts.txt";
+
+
+            Path dataFile = Paths.get(directory, filename);
+
+            List<String> contactList = Files.readAllLines(Paths.get("data", "contacts.txt"));
+            List<String> newList = new ArrayList<>();
+
+
+            Scanner scan = new Scanner(System.in);
+            String userInput = scan.nextLine();
+
+            System.out.println("Okay, I deleted: \n" + userInput + "! Here are your remaining contacts: \n");
+
+            for (String line : contactList) {
+                if (!line.toLowerCase().contains(userInput.toLowerCase())) {
+                    newList.add(line);
+                }
+            }
+
+            Files.write(dataFile, newList); //Over writing the text file with new list
+
+
+        } catch (IOException e) {
+            System.out.println("Sorry, please try again later");
+        }
+
+        viewContacts();
 
     }
+
 
     //TODO: EXIT PROGRAM
 
