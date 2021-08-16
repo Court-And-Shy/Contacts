@@ -39,16 +39,11 @@ public class Data {
                 Files.createFile(dataFile);
             }
 
-            Scanner scan = new Scanner(System.in);
-            String userInput = scan.nextLine();
 
             for (String line : lines) {
-                if (line.contains(userInput)) {
-                    System.out.println(line);
-
-                }
                 System.out.println(line);
             }
+
 
             // If any thing breaks , this is the error message that will run because it caught the error
         } catch (IOException e) {
@@ -84,12 +79,6 @@ public class Data {
 
 
             // Code That Will Run
-            if (Files.notExists(dataDirectory)) {
-                Files.createDirectories(dataDirectory);
-            }
-            if (!Files.exists(dataFile)) {
-                Files.createFile(dataFile);
-            }
 
 
             Files.write(dataFile, contactInfo, StandardOpenOption.APPEND);
@@ -105,35 +94,25 @@ public class Data {
 
 
     //TODO: SEARCH CONTACTS
-    public static void searchContact(String name) {
+    public static void searchContact() {
 
         try {
             String directory = "data";
             String filename = "contacts.txt";
 
-
-            Path dataDirectory = Paths.get(directory);
-            Path dataFile = Paths.get(directory, filename);
-
+            List<String> searchContact = Files.readAllLines(Paths.get("data", "contacts.txt"));
 
             // Code That Will Run
-            if (Files.notExists(dataDirectory)) {
-                Files.createDirectories(dataDirectory);
-            }
-            if (!Files.exists(dataFile)) {
-                Files.createFile(dataFile);
-            }
 
             Scanner scan = new Scanner(System.in);
-            String userResponse = scan.nextLine().toLowerCase();
+            String userInput = scan.nextLine();
 
-            List<String> searchContact = Files.readAllLines(Paths.get("data", "contacts.txt"));
-//            if (userResponse.contains(name)) {
-//                for (int i = 0; i < lines.length; i++) {
-//                    System.out.println(searchContact.get(i));
-//                }
-//            }
-            //Print all files with same name
+            for (String line : searchContact) {
+                if (line.contains(userInput)) {
+                    System.out.println(line);
+
+                }
+            }
 
 
         } catch (Exception e) {

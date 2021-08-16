@@ -21,7 +21,7 @@ public class Main {
                 "5. Exit.\n");
 
         int choice = scan.nextInt();
-        scan.nextLine(); //Notate what this is for
+        scan.nextLine();
 
         boolean userWantsToExit = true;
 
@@ -46,7 +46,7 @@ public class Main {
                 break;
             case 3:
                 System.out.println("\nEnter the Name of contact you would like to search. (Firstname LastName)");
-                Data.searchContact(scan.nextLine());
+                Data.searchContact();
                 break;
             case 4:
                 System.out.println("\nEnter the 7-10 digit phone number of the contact you would like deleted. (Number)");
