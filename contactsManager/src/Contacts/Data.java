@@ -108,7 +108,7 @@ public class Data {
             String userInput = scan.nextLine();
 
             for (String line : searchContact) {
-                if (line.contains(userInput)) {
+                if (line.contains(userInput.toLowerCase())) {
                     System.out.println(line);
 
                 }
@@ -141,7 +141,7 @@ public class Data {
             Scanner scan = new Scanner(System.in);
             String userInput = scan.nextLine();
 
-            System.out.println("Okay, I deleted: \n" + userInput + "! Here are your remaining contacts: \n");
+            System.out.println("Okay, I deleted: " + userInput + "!\n Here are your remaining contacts: \n");
 
             for (String line : contactList) {
                 if (!line.toLowerCase().contains(userInput.toLowerCase())) {
