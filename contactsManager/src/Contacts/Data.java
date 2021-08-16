@@ -8,7 +8,6 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Scanner;
 
 // Get user first name, last name and phone number , append them
@@ -80,12 +79,6 @@ public class Data {
 
 
             // Code That Will Run
-            if (Files.notExists(dataDirectory)) {
-                Files.createDirectories(dataDirectory);
-            }
-            if (!Files.exists(dataFile)) {
-                Files.createFile(dataFile);
-            }
 
 
             Files.write(dataFile, contactInfo, StandardOpenOption.APPEND);
@@ -101,7 +94,7 @@ public class Data {
 
 
     //TODO: SEARCH CONTACTS
-    public static void searchContact(String name) {
+    public static void searchContact() {
 
         try {
             String directory = "data";
@@ -109,28 +102,17 @@ public class Data {
 
             List<String> searchContact = Files.readAllLines(Paths.get("data", "contacts.txt"));
 
-
-            Path dataDirectory = Paths.get(directory);
-            Path dataFile = Paths.get(directory, filename);
-
-
             // Code That Will Run
-            if (Files.notExists(dataDirectory)) {
-                Files.createDirectories(dataDirectory);
-            }
-            if (!Files.exists(dataFile)) {
-                Files.createFile(dataFile);
-            }
 
             Scanner scan = new Scanner(System.in);
-            String userResponse = scan.nextLine().toLowerCase();
+            String userInput = scan.nextLine();
 
-//            if (userResponse.contains(name)) {
-//                for (int i = 0; i < lines.length; i++) {
-//                    System.out.println(searchContact.get(i));
-//                }
-//            }
-            //Print all files with same name
+            for (String line : searchContact) {
+                if (line.contains(userInput)) {
+                    System.out.println(line);
+
+                }
+            }
 
 
         } catch (Exception e) {
