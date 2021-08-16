@@ -125,11 +125,11 @@ public class Data {
             Scanner scan = new Scanner(System.in);
             String userResponse = scan.nextLine().toLowerCase();
 
-            if (userResponse.contains(name)) {
-                for (int i = 0; i < lines.length; i++) {
-                    System.out.println(searchContact.get(i));
-                }
-            }
+//            if (userResponse.contains(name)) {
+//                for (int i = 0; i < lines.length; i++) {
+//                    System.out.println(searchContact.get(i));
+//                }
+//            }
             //Print all files with same name
 
 

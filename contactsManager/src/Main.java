@@ -46,7 +46,6 @@ public class Main {
                 break;
             case 3:
                 System.out.println("\nEnter the Name of contact you would like to search. (Firstname LastName)");
-
                 Data.searchContact(scan.nextLine());
                 break;
             case 4:
