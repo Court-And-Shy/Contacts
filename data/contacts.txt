@@ -3,11 +3,8 @@ Court Ferg | 2102225555 |
 Mario Cart | 5558887979 | 
 Denzell Washington | 1597534568 | 
 ry sutton | 111111111 | 
-Tommy Boy | 210989000 | 
-<<<<<<< HEAD
+Tommy Boy | 210989000 |
 Billy Bob | 1122323 | 
-Destin Bate | 4457756596 | 
-=======
+Destin Bate | 4457756596 |
 Dude Lebowski | 2101939389 |
-Courtnie Ferguson | 2109098898 | 
->>>>>>> 688c977ca8bc72deb54a91a40f13ecb8311a9540
+Courtnie Ferguson | 2109098898 |
