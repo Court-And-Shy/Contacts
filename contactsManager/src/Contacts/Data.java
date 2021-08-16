@@ -8,7 +8,6 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Scanner;
 
 // Get user first name, last name and phone number , append them
@@ -40,11 +39,16 @@ public class Data {
                 Files.createFile(dataFile);
             }
 
+            Scanner scan = new Scanner(System.in);
+            String userInput = scan.nextLine();
 
             for (String line : lines) {
+                if (line.contains(userInput)) {
+                    System.out.println(line);
+
+                }
                 System.out.println(line);
             }
-
 
             // If any thing breaks , this is the error message that will run because it caught the error
         } catch (IOException e) {
@@ -107,8 +111,6 @@ public class Data {
             String directory = "data";
             String filename = "contacts.txt";
 
-            List<String> searchContact = Files.readAllLines(Paths.get("data", "contacts.txt"));
-
 
             Path dataDirectory = Paths.get(directory);
             Path dataFile = Paths.get(directory, filename);
@@ -125,6 +127,7 @@ public class Data {
             Scanner scan = new Scanner(System.in);
             String userResponse = scan.nextLine().toLowerCase();
 
+            List<String> searchContact = Files.readAllLines(Paths.get("data", "contacts.txt"));
 //            if (userResponse.contains(name)) {
 //                for (int i = 0; i < lines.length; i++) {
 //                    System.out.println(searchContact.get(i));
