@@ -1,8 +1,11 @@
 package Contacts;
 
-import java.io.*;
+import java.io.IOException;
 import java.nio.charset.Charset;
-import java.nio.file.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -11,7 +14,6 @@ import java.util.Scanner;
 // Split first name and last name with @  ex:
 
 public class Data {
-
 
 
     //TODO: VIEW CONTACTS
@@ -38,11 +40,9 @@ public class Data {
             }
 
 
-            for(String line : lines) {
+            for (String line : lines) {
                 System.out.println(line);
             }
-
-
 
 
             // If any thing breaks , this is the error message that will run because it caught the error
@@ -87,7 +87,6 @@ public class Data {
             }
 
 
-
             Files.write(dataFile, contactInfo, StandardOpenOption.APPEND);
 
 
@@ -103,30 +102,36 @@ public class Data {
     //TODO: SEARCH CONTACTS
     public static void searchContact(String name) {
 
-        try{
+        try {
+            String directory = "data";
+            String filename = "contacts.txt";
+
+            List<String> searchContact = Files.readAllLines(Paths.get("data", "contacts.txt"));
+
+
+            Path dataDirectory = Paths.get(directory);
+            Path dataFile = Paths.get(directory, filename);
+
+
+            // Code That Will Run
+            if (Files.notExists(dataDirectory)) {
+                Files.createDirectories(dataDirectory);
+            }
+            if (!Files.exists(dataFile)) {
+                Files.createFile(dataFile);
+            }
+
             Scanner scan = new Scanner(System.in);
+            String userResponse = scan.nextLine();
 
+            if (userResponse.contains(name)) {
 
-            String searchedContactNumber[];
-
-            boolean foundContact = false;
-
-            while(scan.hasNextLine()) {
-                searchedContactNumber = scan.nextLine().split(" ");
-                if(searchedContactNumber[0].contains(name)){
-                    System.out.println("The number associated with " + name + " is " + searchedContactNumber[1]);
-                    foundContact = true;
+                for (String line : searchContact) {
+                    System.out.println(line);
                 }
             }
 
-
-            if(!foundContact) {
-                System.out.println("Could not find " + name);
-            }
-
-            System.out.println("");
-
-        }catch (Exception e) {
+        } catch (Exception e) {
             System.out.println("Sorry, please try again later");
         }
 
@@ -135,7 +140,6 @@ public class Data {
 
     //TODO: DELETE CONTACTS
     public static void deleteContact(long number) {
-
 
 
     }
