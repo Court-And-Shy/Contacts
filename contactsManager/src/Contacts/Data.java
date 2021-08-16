@@ -4,6 +4,7 @@ import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.file.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 // Get user first name, last name and phone number , append them
@@ -18,14 +19,12 @@ public class Data {
 
 
         try {
-            System.out.println("I'm inside of Data class but I'm run in the main through the menu in option 1");
-
-
 
             String directory = "data";
             String filename = "contacts.txt";
 
             //Create either a List or an ArrayList
+            List<String> lines = Files.readAllLines(Paths.get("data", "contacts.txt"));
 
             Path dataDirectory = Paths.get(directory);
             Path dataFile = Paths.get(directory, filename);
@@ -39,8 +38,12 @@ public class Data {
             }
 
 
+            for(String line : lines) {
+                System.out.println(line);
+            }
 
-            Files.readAllLines(dataFile, //This is going to be an array list );
+
+
 
             // If any thing breaks , this is the error message that will run because it caught the error
         } catch (IOException e) {

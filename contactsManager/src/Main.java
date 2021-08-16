@@ -28,7 +28,7 @@ public class Main {
 
         switch (choice) {
             case 1:
-                System.out.println("\nDisplaying all contacts...(Contacts)");
+                System.out.println("\nDisplaying all contacts...\n");
                 System.out.println("Name | Phone number");
                 System.out.println("---------------");
 
