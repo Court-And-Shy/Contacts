@@ -1,6 +1,7 @@
 package Contacts;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -13,7 +14,7 @@ public class Data {
 
 
     //TODO: VIEW CONTACTS
-    public static void viewContacts() {
+    public static Charset viewContacts() {
 
 
         try {
@@ -21,13 +22,33 @@ public class Data {
 
 
 
+            String directory = "data";
+            String filename = "contacts.txt";
+
+            //Create either a List or an ArrayList
+
+            Path dataDirectory = Paths.get(directory);
+            Path dataFile = Paths.get(directory, filename);
+
+            // Code That Will Run
+            if (Files.notExists(dataDirectory)) {
+                Files.createDirectories(dataDirectory);
+            }
+            if (!Files.exists(dataFile)) {
+                Files.createFile(dataFile);
+            }
+
+
+
+            Files.readAllLines(dataFile, //This is going to be an array list );
 
             // If any thing breaks , this is the error message that will run because it caught the error
-        } catch (Exception e) {
+        } catch (IOException e) {
             System.out.println("I'm sorry, I can't can't you right now.");
         }
 
 
+        return null;
     }
 
     public static void createDirectoryAndFile() {
@@ -61,6 +82,7 @@ public class Data {
             if (!Files.exists(dataFile)) {
                 Files.createFile(dataFile);
             }
+
 
 
             Files.write(dataFile, contactInfo, StandardOpenOption.APPEND);
