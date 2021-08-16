@@ -12,18 +12,18 @@ public class Contact {
 
     private String number;
 
-    //Constructor
+    //TODO:Constructors
     public Contact(String firstName, String lastName, String number) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.number = number;
     }
 
-    public String getFirstName() {
+    public String getfirstName() {
         return lastName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setfirstName(String firstName) {
         this.firstName = firstName;
     }
 

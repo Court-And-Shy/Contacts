@@ -1,10 +1,7 @@
 package Contacts;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
+import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -16,7 +13,7 @@ public class Data {
 
 
 
-    //VIEW CONTACTS
+    //TODO: VIEW CONTACTS
     public static void viewContacts() {
 
 
@@ -38,7 +35,7 @@ public class Data {
 
     }
 
-    //ADD CONTACTS
+    //TODO: ADD CONTACTS
     public static void addContact(String name, long number) {
 
         try {
@@ -79,7 +76,7 @@ public class Data {
     }
 
 
-    //SEARCH CONTACTS
+    //TODO: SEARCH CONTACTS
     public static void searchContact(String name) {
 
         try{
@@ -112,9 +109,14 @@ public class Data {
 
     }
 
-    //DELETE CONTACTS
+    //TODO: DELETE CONTACTS
+    public static void deleteContact(long number) {
 
-    //EXIT PROGRAM
+
+
+    }
+
+    //TODO: EXIT PROGRAM
 
     public static void exitProgram() {
 
