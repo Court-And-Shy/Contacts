@@ -108,7 +108,7 @@ public class Data {
             String userInput = scan.nextLine();
 
             for (String line : searchContact) {
-                if (line.contains(userInput.toLowerCase())) {
+                if (line.contains(userInput)) {
                     System.out.println(line);
 
                 }
