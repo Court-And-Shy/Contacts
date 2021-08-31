@@ -10,24 +10,24 @@ public class Contact {
 
     private String lastName;
 
-    private double number;
+    private String number;
 
-    //Constructor
-    public Contact(String firstName, String lastName, double number) {
+    //TODO:Constructors
+    public Contact(String firstName, String lastName, String number) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.number = number;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getfirstName() {
+        return lastName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setfirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
+    public  String getLastName() {
         return lastName;
     }
 
@@ -35,11 +35,11 @@ public class Contact {
         this.lastName = lastName;
     }
 
-    public double getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(double number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
@@ -57,8 +57,7 @@ public class Contact {
 
     String userInput = scan.next();
 
-    // Main Menu Display
-    // # 2.
+
 
 
     public static void contactApp() {
