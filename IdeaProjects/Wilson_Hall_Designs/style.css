@@ -45,6 +45,7 @@ ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: -100;
 }
 
 
@@ -58,13 +59,15 @@ ul li a {
     opacity: 0.25;
 
 
+
+
 }
 
 
 #headerOne {
 
     position: relative;
-    font-size: 75px;
+    font-size: 70px;
     font-family: 'Darker Grotesque', sans-serif;
     text-align: center;
 }
@@ -76,21 +79,28 @@ ul li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 12.5em;
+
+
 
 }
 
 #wwdButton {
-    height: 200px;
+    height: 50px;
     width: 300px;
     font-family: 'Darker Grotesque', sans-serif;
     border-radius: 50px;
     background-color: whitesmoke;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     border: solid black 1px;
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    margin: 25px;
 
 }
 #wwd h1 {
-    font-size: 54px;
+    font-size: 72px;
     text-align: center;
 }
 
@@ -110,9 +120,22 @@ ul li a {
 }
 
 #mainRow {
-    display: inline-block;
+    /*display: inline-block;*/
+    display: flex;
+    justify-content: space-between;
+    margin: 2em;
+}
+
+#mainRow img {
+    display: flex;
+    justify-content: center;
+}
+
+.col-4 p {
+    font-size: 24px;
 }
 /*
+
 
 Will Want
 
