@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    float: right;
+}
+
+ul {
+    display: flex;
+    align-items: baseline;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+
+
+
+}
+
+ul li a {
+
+    color: black;
+    font-family: 'Darker Grotesque', sans-serif;
+    text-shadow: 2px 2px 4px darkgrey;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#partOne{
+    position: relative;
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#partOne:before {
+    content:"";
+    position: absolute;
+    background-image: url("img/backgroundBlue.jpeg");
+    width: 100%;
+    height: 750px;
+    background-size: cover;
+    opacity: 0.25;
+
+
+}
+
+
+#headerOne {
+
+    position: relative;
+    font-size: 75px;
+    font-family: 'Darker Grotesque', sans-serif;
+    text-align: center;
+}
+
+#wwd {
+    font-size: xx-large;
+    font-weight: lighter;
+    font-family: 'Major Mono Display', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#wwdButton {
+    height: 200px;
+    width: 300px;
+    font-family: 'Darker Grotesque', sans-serif;
+    border-radius: 50px;
+    background-color: whitesmoke;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: solid black 1px;
+
+}
+#wwd h1 {
+    font-size: 54px;
+    text-align: center;
+}
+
+#wwd h3 {
+    font-size: 45px;
+    text-align: center;
+}
+
+#bottomFoot {
+    width: 100%;
+    height: 50px;
+    background-color: deeppink;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#mainRow {
+    display: inline-block;
+}
+/*
+
+Will Want
+
+1. Hover affect when users hover over 3 different icons
+2. Hover effect for research, design and develop
+3. Link the Contact Us Today button to the Contact Page
+
+*/

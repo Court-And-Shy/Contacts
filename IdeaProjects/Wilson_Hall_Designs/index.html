@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <!--  Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!--Header Start-->
+<header>
+
+    <nav class="container">
+        <ul>
+            <li><a href="#" target="_blank">Home</a></li>
+            <li><a href="#" target="_blank">About</a></li>
+            <li><a href="#" target="_blank">Contact</a></li>
+        </ul>
+    </nav>
+
+
+</header>
+<!--Header End-->
+
+
+<!--Main Start-->
+
+<div class="container" id="partOne">
+    <!--    <img src="img/backgroundBlue.jpeg" height="750" width="100%">-->
+    <div id="headerOne">
+        <h1>Logo, <br> Design & <br> Web Development</h1>
+    </div>
+</div>
+
+
+
+
+
+<div class="container" id="wwd">
+    <div>
+        <h1>What We Do</h1>
+        <h3>Here At Wilson Hall Designs</h3>
+        <button id="wwdButton" type="submit">Contact Us Today!</button>
+    </div>
+    <div class="row" id="mainRow">
+        <div class="col-4">
+            <div class="" id="research">
+                <img src="img/icons8-research-60%20(1).png">
+                <h3>RESEARCH</h3>
+                <p>With my own personal crafted process, i’ll gather the necessary details needed to ensure you website is everything you want and more!</p>
+
+            </div>
+        </div>
+        <div class="col-4">
+            <div id="design">
+                <img src="img/icons8-graphic-design-64.png">
+                <h3>DESIGN</h3>
+                <p>With the information I’ll Gather From My research, THat is Where The true ART happens! I’ll transform your VISION into REALITY!</p>
+            </div>
+        </div>
+        <div class="col-4">
+            <div id="develop">
+                <img src="img/icons8-developer-50.png">
+                <h3>DEVELOP</h3>
+                <p>ONCE your dream site has been designed, I’ll build It from the GROUND up! </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Main End-->
+
+
+<!--Footer Start-->
+<footer>
+    <div id="bottomFoot"></div>
+</footer>
+<!--Footer End-->
+
+
+<script
+        src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous">
+
+</script>
+<script src="main.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $("#wwdButton").click(function () {
+            window.location.href = 'about.html';
+        })
+
+
+    });
+
+</script>
+</body>
+</html>
